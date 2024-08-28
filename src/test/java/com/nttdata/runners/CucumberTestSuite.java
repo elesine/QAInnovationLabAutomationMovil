@@ -1,6 +1,7 @@
 package com.nttdata.runners;
 
 import io.cucumber.junit.CucumberOptions;
+import junit.runner.BaseTestRunner;
 import net.serenitybdd.cucumber.CucumberWithSerenity;
 import org.junit.runner.RunWith;
 
@@ -9,7 +10,7 @@ import org.junit.runner.RunWith;
         plugin = {"pretty"},
         features = "src/test/resources/features",
         glue = "com.nttdata.stepsdefinitions",
-        tags ="@LoginTest"
+        tags ="@CarritoDeCompras"
 )
 public class CucumberTestSuite {
 }
