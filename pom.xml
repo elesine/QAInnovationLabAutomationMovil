@@ -21,7 +21,6 @@
         <tags></tags>
         <parallel.tests>4</parallel.tests>
         <webdriver.base.url></webdriver.base.url>
-<!--        <appium.version>8.5.1</appium.version>-->
     </properties>
 
     <dependencies>
@@ -116,50 +115,7 @@
             <version>2.2</version>
             <scope>test</scope>
         </dependency>
-
-        <dependency>
-            <groupId>io.appium</groupId>
-            <artifactId>java-client</artifactId>
-            <version>8.5.1</version> <!-- Usa la versión más reciente compatible -->
-            <scope>test</scope>
-        </dependency>
-        <!-- Proyecto sin cucumber-->
-        <dependency>
-            <groupId>org.seleniumhq.selenium</groupId>
-            <artifactId>selenium-http-jdk-client</artifactId>
-            <version>4.5.0</version>
-        </dependency>
-        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
-<!--        <dependency>-->
-<!--            <groupId>org.seleniumhq.selenium</groupId>-->
-<!--            <artifactId>selenium-java</artifactId>-->
-<!--            <version>4.8.0</version>-->
-<!--        </dependency>-->
-<!--&lt;!&ndash;         Proyecto CON CUCUMBER&ndash;&gt;-->
-<!--&lt;!&ndash;         https://mvnrepository.com/artifact/io.cucumber/cucumber-java &ndash;&gt;-->
-<!--        <dependency>-->
-<!--            <groupId>io.cucumber</groupId>-->
-<!--            <artifactId>cucumber-java</artifactId>-->
-<!--            <version>7.3.4</version>-->
-<!--        </dependency>-->
-
-<!--        &lt;!&ndash; https://mvnrepository.com/artifact/io.cucumber/cucumber-junit &ndash;&gt;-->
-<!--        <dependency>-->
-<!--            <groupId>io.cucumber</groupId>-->
-<!--            <artifactId>cucumber-junit</artifactId>-->
-<!--            <version>7.3.4</version>-->
-<!--            <scope>test</scope>-->
-<!--        </dependency>-->
     </dependencies>
-
-
-<!--    <repositories>-->
-<!--        <repository>-->
-<!--            <id>central</id>-->
-<!--            <url>https://repo.maven.apache.org/maven2</url>-->
-<!--        </repository>-->
-<!--    </repositories>-->
-
     <build>
         <plugins>
             <plugin>
@@ -227,3 +183,247 @@
     </build>
 
 </project>
+
+<!--<?xml version="1.0" encoding="UTF-8"?>-->
+<!--<project xmlns="http://maven.apache.org/POM/4.0.0"-->
+<!--         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"-->
+<!--         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">-->
+<!--    <modelVersion>4.0.0</modelVersion>-->
+
+<!--    <groupId>org.example</groupId>-->
+<!--    <artifactId>qa-lab-mobile-automation</artifactId>-->
+<!--    <version>1.0-SNAPSHOT</version>-->
+<!--    <packaging>jar</packaging>-->
+
+<!--    <name>Sample Serenity BDD project using Cucumber</name>-->
+
+<!--    <properties>-->
+<!--        <maven.compiler.source>8</maven.compiler.source>-->
+<!--        <maven.compiler.target>8</maven.compiler.target>-->
+<!--        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>-->
+<!--        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>-->
+<!--        <serenity.version>2.4.51</serenity.version>-->
+<!--        <serenity.maven.version>2.4.51</serenity.maven.version>-->
+<!--        <serenity.cucumber.version>2.4.51</serenity.cucumber.version>-->
+<!--        <cucumber.version>6.11.0</cucumber.version>-->
+<!--        <logback.version>1.2.3</logback.version>-->
+<!--        <encoding>UTF-8</encoding>-->
+<!--        <tags></tags>-->
+<!--        <parallel.tests>4</parallel.tests>-->
+<!--        <appium.version>8.5.1</appium.version>-->
+<!--        <webdriver.base.url></webdriver.base.url>-->
+<!--&lt;!&ndash;        <appium.version>8.5.1</appium.version>&ndash;&gt;-->
+<!--    </properties>-->
+
+<!--    <dependencies>-->
+<!--        <dependency>-->
+<!--            <groupId>ch.qos.logback</groupId>-->
+<!--            <artifactId>logback-classic</artifactId>-->
+<!--            <version>${logback.version}</version>-->
+<!--        </dependency>-->
+
+<!--        &lt;!&ndash; Serenity Dependencies &ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>net.serenity-bdd</groupId>-->
+<!--            <artifactId>serenity-core</artifactId>-->
+<!--            <version>${serenity.version}</version>-->
+<!--            <scope>test</scope>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>net.serenity-bdd</groupId>-->
+<!--            <artifactId>serenity-junit</artifactId>-->
+<!--            <version>${serenity.version}</version>-->
+<!--            <scope>test</scope>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>net.serenity-bdd</groupId>-->
+<!--            <artifactId>serenity-rest-assured</artifactId>-->
+<!--            <version>${serenity.version}</version>-->
+<!--            <scope>test</scope>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>net.serenity-bdd</groupId>-->
+<!--            <artifactId>serenity-screenplay</artifactId>-->
+<!--            <version>${serenity.version}</version>-->
+<!--            <scope>test</scope>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>net.serenity-bdd</groupId>-->
+<!--            <artifactId>serenity-screenplay-rest</artifactId>-->
+<!--            <version>${serenity.version}</version>-->
+<!--            <scope>test</scope>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>net.serenity-bdd</groupId>-->
+<!--            <artifactId>serenity-cucumber6</artifactId>-->
+<!--            <version>${serenity.cucumber.version}</version>-->
+<!--            <scope>test</scope>-->
+<!--        </dependency>-->
+
+<!--        &lt;!&ndash; libraries used directly from serenity-core&ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>io.rest-assured</groupId>-->
+<!--            <artifactId>rest-assured</artifactId>-->
+<!--            <version>4.3.2</version>-->
+<!--            <scope>test</scope>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>io.rest-assured</groupId>-->
+<!--            <artifactId>json-path</artifactId>-->
+<!--            <version>4.3.3</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>io.rest-assured</groupId>-->
+<!--            <artifactId>xml-path</artifactId>-->
+<!--            <version>4.3.3</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>org.codehaus.groovy</groupId>-->
+<!--            <artifactId>groovy</artifactId>-->
+<!--            <version>3.0.6</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>org.codehaus.groovy</groupId>-->
+<!--            <artifactId>groovy-xml</artifactId>-->
+<!--            <version>3.0.6</version>-->
+<!--        </dependency>-->
+
+<!--        &lt;!&ndash; General test libraries &ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>junit</groupId>-->
+<!--            <artifactId>junit</artifactId>-->
+<!--            <version>4.13.1</version>-->
+<!--            <scope>test</scope>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>org.assertj</groupId>-->
+<!--            <artifactId>assertj-core</artifactId>-->
+<!--            <version>3.6.2</version>-->
+<!--            <scope>test</scope>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>org.hamcrest</groupId>-->
+<!--            <artifactId>hamcrest</artifactId>-->
+<!--            <version>2.2</version>-->
+<!--            <scope>test</scope>-->
+<!--        </dependency>-->
+
+<!--        <dependency>-->
+<!--            <groupId>io.appium</groupId>-->
+<!--            <artifactId>java-client</artifactId>-->
+<!--            <version>7.6.0</version> &lt;!&ndash; Usa la versión más reciente compatible &ndash;&gt;-->
+<!--            <scope>test</scope>-->
+<!--        </dependency>-->
+<!--        &lt;!&ndash; Proyecto sin cucumber&ndash;&gt;-->
+<!--&lt;!&ndash;        <dependency>&ndash;&gt;-->
+<!--&lt;!&ndash;            <groupId>org.seleniumhq.selenium</groupId>&ndash;&gt;-->
+<!--&lt;!&ndash;            <artifactId>selenium-http-jdk-client</artifactId>&ndash;&gt;-->
+<!--&lt;!&ndash;            <version>4.5.0</version>&ndash;&gt;-->
+<!--&lt;!&ndash;        </dependency>&ndash;&gt;-->
+<!--        &lt;!&ndash; https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java &ndash;&gt;-->
+<!--&lt;!&ndash;        <dependency>&ndash;&gt;-->
+<!--&lt;!&ndash;            <groupId>org.seleniumhq.selenium</groupId>&ndash;&gt;-->
+<!--&lt;!&ndash;            <artifactId>selenium-java</artifactId>&ndash;&gt;-->
+<!--&lt;!&ndash;            <version>4.8.0</version>&ndash;&gt;-->
+<!--&lt;!&ndash;        </dependency>&ndash;&gt;-->
+<!--&lt;!&ndash;        <dependency>&ndash;&gt;-->
+<!--&lt;!&ndash;            <groupId>org.junit.jupiter</groupId>&ndash;&gt;-->
+<!--&lt;!&ndash;            <artifactId>junit-jupiter-api</artifactId>&ndash;&gt;-->
+<!--&lt;!&ndash;            <version>5.8.2</version>&ndash;&gt;-->
+<!--&lt;!&ndash;            <scope>test</scope>&ndash;&gt;-->
+<!--&lt;!&ndash;        </dependency>&ndash;&gt;-->
+<!--&lt;!&ndash;        <dependency>&ndash;&gt;-->
+<!--&lt;!&ndash;            <groupId>io.cucumber</groupId>&ndash;&gt;-->
+<!--&lt;!&ndash;            <artifactId>cucumber-java</artifactId>&ndash;&gt;-->
+<!--&lt;!&ndash;            <version>${cucumber.version}</version>&ndash;&gt;-->
+<!--&lt;!&ndash;        </dependency>&ndash;&gt;-->
+
+<!--        &lt;!&ndash; https://mvnrepository.com/artifact/io.cucumber/cucumber-junit &ndash;&gt;-->
+<!--&lt;!&ndash;        <dependency>&ndash;&gt;-->
+<!--&lt;!&ndash;            <groupId>io.cucumber</groupId>&ndash;&gt;-->
+<!--&lt;!&ndash;            <artifactId>cucumber-junit</artifactId>&ndash;&gt;-->
+<!--&lt;!&ndash;            <version>${cucumber.version}</version>&ndash;&gt;-->
+<!--&lt;!&ndash;            <scope>test</scope>&ndash;&gt;-->
+<!--&lt;!&ndash;        </dependency>&ndash;&gt;-->
+<!--    </dependencies>-->
+
+
+<!--&lt;!&ndash;    <repositories>&ndash;&gt;-->
+<!--&lt;!&ndash;        <repository>&ndash;&gt;-->
+<!--&lt;!&ndash;            <id>central</id>&ndash;&gt;-->
+<!--&lt;!&ndash;            <url>https://repo.maven.apache.org/maven2</url>&ndash;&gt;-->
+<!--&lt;!&ndash;        </repository>&ndash;&gt;-->
+<!--&lt;!&ndash;    </repositories>&ndash;&gt;-->
+
+<!--    <build>-->
+<!--        <plugins>-->
+<!--            <plugin>-->
+<!--                <groupId>org.apache.maven.plugins</groupId>-->
+<!--                <artifactId>maven-surefire-plugin</artifactId>-->
+<!--                <version>3.0.0-M5</version>-->
+<!--                <configuration>-->
+<!--&lt;!&ndash;                    <skip>true</skip>&ndash;&gt;-->
+<!--                    <includes>-->
+<!--                        <include>**/*Test.java</include>-->
+<!--                    </includes>-->
+<!--                </configuration>-->
+<!--            </plugin>-->
+<!--            <plugin>-->
+<!--                <groupId>org.apache.maven.plugins</groupId>-->
+<!--                <artifactId>maven-failsafe-plugin</artifactId>-->
+<!--                <version>2.22.1</version>-->
+<!--                <configuration>-->
+<!--                    <includes>-->
+<!--                        <include>**/*Test.java</include>-->
+<!--                        <include>**/Test*.java</include>-->
+<!--                        <include>**/*TestSuite.java</include>-->
+<!--                        <include>**/When*.java</include>-->
+<!--                    </includes>-->
+<!--                    <systemPropertyVariables>-->
+<!--                        &lt;!&ndash;suppress UnresolvedMavenProperty &ndash;&gt;-->
+<!--                        <webdriver.base.url>${webdriver.base.url}</webdriver.base.url>-->
+<!--                    </systemPropertyVariables>-->
+<!--                    <parallel>classes</parallel>-->
+<!--                    <threadCount>${parallel.tests}</threadCount>-->
+<!--                    <forkCount>${parallel.tests}</forkCount>-->
+<!--                </configuration>-->
+<!--                <executions>-->
+<!--                    <execution>-->
+<!--                        <goals>-->
+<!--                            <goal>integration-test</goal>-->
+<!--                            <goal>verify</goal>-->
+<!--                        </goals>-->
+<!--                    </execution>-->
+<!--                </executions>-->
+<!--            </plugin>-->
+<!--            <plugin>-->
+<!--                <groupId>org.apache.maven.plugins</groupId>-->
+<!--                <artifactId>maven-compiler-plugin</artifactId>-->
+<!--                <version>3.8.0</version>-->
+<!--                <configuration>-->
+<!--                    <source>1.8</source>-->
+<!--                    <target>1.8</target>-->
+<!--                </configuration>-->
+<!--            </plugin>-->
+<!--            <plugin>-->
+<!--                <groupId>net.serenity-bdd.maven.plugins</groupId>-->
+<!--                <artifactId>serenity-maven-plugin</artifactId>-->
+<!--                <version>${serenity.maven.version}</version>-->
+<!--                <configuration>-->
+<!--                    &lt;!&ndash;suppress UnresolvedMavenProperty &ndash;&gt;-->
+<!--                    <tags>${tags}</tags>-->
+<!--                </configuration>-->
+<!--                <executions>-->
+<!--                    <execution>-->
+<!--                        <id>serenity-reports</id>-->
+<!--                        <phase>post-integration-test</phase>-->
+<!--                        <goals>-->
+<!--                            <goal>aggregate</goal>-->
+<!--                        </goals>-->
+<!--                    </execution>-->
+<!--                </executions>-->
+<!--            </plugin>-->
+<!--        </plugins>-->
+<!--    </build>-->
+
+<!--</project>-->

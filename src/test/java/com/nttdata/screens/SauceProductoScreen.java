@@ -15,16 +15,17 @@ public class SauceProductoScreen extends PageObject {
     private static final String UNIDADES_XPATH = "//android.widget.TextView[@resource-id='com.saucelabs.mydemoapp.android:id/noTV']";
     private static final String BUTTONCARRITO_ID = "com.saucelabs.mydemoapp.android:id/cartBt";
     private static final String TEXTUNIDADESCARRITO_ID = "com.saucelabs.mydemoapp.android:id/cartTV";
-
+    private static final String INCREMENTADOR_XPATH = "//android.widget.ImageView[@content-desc='Increase item quantity']";
     public boolean agregarUnidades(int unidades) {
-        WebElement quantityInput = getDriver().findElement(By.xpath(UNIDADES_XPATH));
+        WebDriverWait wait = new WebDriverWait(getDriver(), 10);
+        WebElement quantityInput = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(UNIDADES_XPATH)));
         System.out.println("Productos cantidad " + quantityInput.getText());
-        // Limpia el campo antes de establecer el nuevo valor
-        quantityInput.clear();
-        System.out.println("Productos cantidad limpio: " + quantityInput.getAttribute("value"));
-        //Envio la cantidad
-        quantityInput.sendKeys(String.valueOf(unidades));
-        System.out.println("Productos cantidad agregado: " + quantityInput.getAttribute("value"));
+        //Agregar hasta la cantidad
+        WebElement btnIncrementar = getDriver().findElement(By.xpath(INCREMENTADOR_XPATH));
+        for(int i =0 ; i < unidades-1; i++){
+            btnIncrementar.click();
+        }
+        System.out.println("Productos cantidad agregado: " + quantityInput.getText());
 
         return quantityInput.isDisplayed();
     }

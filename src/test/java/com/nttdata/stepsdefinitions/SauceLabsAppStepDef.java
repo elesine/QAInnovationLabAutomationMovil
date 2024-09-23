@@ -18,7 +18,7 @@ public class SauceLabsAppStepDef {
 
     int cantidad = 0;
 
-    @Given("estoy en la aplicación de SauceLabs")
+    @Given("estoy en la aplicacion de SauceLabs")
     public void estoyEnLaAplicacionDeSauceLabs() {
         //valido que estoy dentro de la aplicacion
         this.suacePrincipalSteps = new SuacePrincipalSteps();
@@ -34,13 +34,12 @@ public class SauceLabsAppStepDef {
     public void agregoDelSiguienteProducto(int unidades, String producto) {
         //Buscar producto son el nombre dado y dar click
         this.suacePrincipalSteps.buscoProducto(producto);
-
         //En el Screen del Producto buscar las unidades y setterar con las unidades dadas
         this.suaceProductoSteps = new SuaceProductoSteps();
         this.suaceProductoSteps.agregarUnidadesProducto(unidades);
         //En el Screen del Producto buscar boton Add to cart y hacer click
         this.suaceProductoSteps.agregarCarrito();
-        this.cantidad += unidades;
+        this.cantidad = unidades;
     }
 
     @Then("valido el carrito de compra actualice correctamente")
