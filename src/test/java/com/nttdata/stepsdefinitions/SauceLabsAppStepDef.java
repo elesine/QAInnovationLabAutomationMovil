@@ -34,7 +34,7 @@ public class SauceLabsAppStepDef {
     public void agregoDelSiguienteProducto(int unidades, String producto) {
         //Buscar producto son el nombre dado y dar click
         this.suacePrincipalSteps.buscoProducto(producto);
-        //En el Screen del Producto buscar las unidades y setterar con las unidades dadas
+        //En el Screen del Producto buscar las unidades y agregar con la nueva cantidad
         this.suaceProductoSteps = new SuaceProductoSteps();
         this.suaceProductoSteps.agregarUnidadesProducto(unidades);
         //En el Screen del Producto buscar boton Add to cart y hacer click
@@ -44,8 +44,8 @@ public class SauceLabsAppStepDef {
 
     @Then("valido el carrito de compra actualice correctamente")
     public void validoElCarritoDeCompraActualiceCorrectamente() {
-        //En el Screen del Producto buscar el carrito en la parte superior y ver la cantidad
-        //sea la suma de la cantidad dada en el paso anterior
+        //En el Screen del Producto buscar el carrito en la parte superior y ver la cantidad sea igual a
+        //a la cantidad dada en el paso anterior
         this.suaceProductoSteps.obtenerCantidadProductosAgregados(this.cantidad);
     }
 

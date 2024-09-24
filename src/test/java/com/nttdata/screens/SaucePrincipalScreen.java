@@ -35,11 +35,6 @@ public class SaucePrincipalScreen extends PageObject {
         return header.isDisplayed();
     }
 
-//    public void scrollAndClick(String visibleText) {
-//        androidDriver.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView(new UiSelector().textContains(\""+visibleText+"\").instance(0))").click();
-//    }
-
-
     public boolean buscoProducto(String producto) {
         List<WebElement> productos = getDriver().findElements(By.xpath(PRODUCTS_LIST_XPATH));
         System.out.println("tamanio lista  : " + productos.size());
